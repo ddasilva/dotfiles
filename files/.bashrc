@@ -9,7 +9,7 @@ alias emaf="emacs -nw"
 alias git_untracked='git ls-files . --exclude-standard --others'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-export PATH=$HOME/bin:$HOME/Bin:$HOME:/.local/bin:$PATH
+export PATH=$HOME/bin:$HOME/Bin:$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib/
 export Y_DEV_KEY="AI39si4J3y3x67SL4SOyCSKUTQ9lk6r-taAoWd9oCars9G7COACM2QVIquCFm1om9NHBYsSBGmWeqeRU_30XkJuvVW68AJC3nQ"
 
