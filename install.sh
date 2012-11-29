@@ -19,6 +19,7 @@ normal() {
 	if [[ "$last_char" != '~' && "$last_char" != '#' ]]; then
 	    case "$fname" in
 		".bashrc") dest="$HOME";;
+		".gitconfig") dest="$HOME";;
 		*) dest=;;
 	    esac
 	
