@@ -1,8 +1,9 @@
 #!/bin/bash
-#############################################
+
+##############################################
 # Installer for dot files, by meltingwax.
 # Daniel da Silva <daniel@meltingwax.net>
-#############################################
+##############################################
 
 usage() {
     echo "Usage: $0 [FILE [FILE [...]]]"
@@ -18,8 +19,9 @@ normal() {
 	
 	if [[ "$last_char" != '~' && "$last_char" != '#' ]]; then
 	    case "$fname" in
-		".bashrc") dest="$HOME";;
-		".gitconfig") dest="$HOME";;
+		.bashrc) dest=$HOME;;
+		.gitconfig) dest=$HOME;;
+		.screenrc) dest=$HOME;;
 		*) dest=;;
 	    esac
 	
