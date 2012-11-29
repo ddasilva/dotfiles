@@ -13,7 +13,6 @@ export PATH=$HOME/bin:$HOME/Bin:$HOME:/.local/bin:$PATH
 export Y_DEV_KEY="AI39si4J3y3x67SL4SOyCSKUTQ9lk6r-taAoWd9oCars9G7COACM2QVIquCFm1om9NHBYsSBGmWeqeRU_30XkJuvVW68AJC3nQ"
 
 
-
 # ---------------- Stop Here if not running interactively ---------------- #
 
 [ -z "$PS1" ] && return
@@ -47,7 +46,23 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    case $(hostname) in
+	# Desktops
+	verlaine)
+	    PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ";;
+
+	# Personal Servers
+	rainbowroad.org | rapids)
+	    PS1='\[\033[01;35m\]\u@\h\[\033[01;30m\] \w \$\[\033[00m\] ';;
+	
+	# Work Servers
+	s4pt | gsocial)
+	    PS1="\[\033[01;33m\]\h\[\033[00;36m\]:\w \[\033[00m\]$ ";;
+
+	# Default
+	*)
+	    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\] \w $\[\033[00m\]\ ';;
+    esac
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
