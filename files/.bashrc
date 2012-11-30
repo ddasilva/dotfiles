@@ -8,9 +8,10 @@
 alias emaf="emacs -nw"
 alias git_untracked='git ls-files . --exclude-standard --others'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias ll="ls -l"
 
 export PATH=$HOME/bin:$HOME/Bin:$HOME/.local/bin:$PATH
-export LD_LIBRARY_PATH=$HOME/.local/lib/
+export LD_LIBRARY_PATH=$HOME/.local/lib/:$LD_LIBRARY_PATH
 export Y_DEV_KEY="AI39si4J3y3x67SL4SOyCSKUTQ9lk6r-taAoWd9oCars9G7COACM2QVIquCFm1om9NHBYsSBGmWeqeRU_30XkJuvVW68AJC3nQ"
 
 
@@ -53,7 +54,7 @@ if [ "$color_prompt" = yes ]; then
 	    PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ";;
 
 	# Personal Servers
-	rainbowroad.org | rapids)
+	rainbowroad.org | meltingwax.xen.prgmr.com | rapids)
 	    PS1='\[\033[01;35m\]\u@\h\[\033[01;30m\] \w \$\[\033[00m\] ';;
 	
 	# Work Servers

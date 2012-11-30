@@ -1,8 +1,7 @@
 #!/bin/bash
-
 ##############################################
 # Installer for dot files, by meltingwax.
-# Daniel da Silva <daniel@meltingwax.net>
+# Email: <daniel@meltingwax.net>
 ##############################################
 
 usage() {
@@ -20,6 +19,7 @@ normal() {
 	if [[ "$last_char" != '~' && "$last_char" != '#' ]]; then
 	    case "$fname" in
 		.bashrc) dest=$HOME;;
+		.emacs) dest=$HOME;;
 		.gitconfig) dest=$HOME;;
 		.screenrc) dest=$HOME;;
 		*) dest=;;
