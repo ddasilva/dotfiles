@@ -23,8 +23,7 @@ normal() {
 			dest=$HOME/.profile
 		    else
 			dest=$HOME
-		    fi
-		    ;;
+		    fi;;
 		.emacs) dest=$HOME;;
 		.gitconfig) dest=$HOME;;
 		.screenrc) dest=$HOME;;
