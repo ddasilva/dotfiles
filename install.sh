@@ -18,7 +18,13 @@ normal() {
 	
 	if [[ "$last_char" != '~' && "$last_char" != '#' ]]; then
 	    case "$fname" in
-		.bashrc) dest=$HOME;;
+		.bashrc)
+		    if [ $(uname) == 'Darwin' ]; then
+			dest=$HOME/.profile
+		    else
+			dest=$HOME
+		    fi
+		    ;;
 		.emacs) dest=$HOME;;
 		.gitconfig) dest=$HOME;;
 		.screenrc) dest=$HOME;;
