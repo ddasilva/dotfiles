@@ -19,3 +19,11 @@
   (delete-trailing-whitespace)
   (indent-region (point-min) (point-max) nil)
   (untabify (point-min) (point-max)))
+
+; Enable syntax hilighting
+(cond ((fboundp 'global-font-lock-mode)
+       ;; Turn on font-lock in all modes that support it
+       (global-font-lock-mode t)
+       ;; Maximum colors
+       (setq font-lock-maximum-decoration t)))
+
