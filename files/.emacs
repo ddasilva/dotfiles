@@ -27,3 +27,6 @@
        ;; Maximum colors
        (setq font-lock-maximum-decoration t)))
 
+
+; Move backups to somewhere else
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
