@@ -1,3 +1,5 @@
 [user]
 	name = Daniel da Silva
 	email = daniel@meltingwax.net
+[color]
+	ui = true
