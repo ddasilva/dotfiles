@@ -3,3 +3,5 @@
 	email = daniel@meltingwax.net
 [color]
 	ui = true
+[push]
+	default = matching
