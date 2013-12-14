@@ -30,7 +30,7 @@ HISTFILESIZE=2000
 shopt -s histappend
 shopt -s checkwinsize
 
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # -------------------- Determine Terminal coloring ----------------------- #
 
