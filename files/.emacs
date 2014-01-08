@@ -30,3 +30,13 @@
 
 ; Move backups to somewhere else
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
+
+; Clojure mode
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(unless (package-installed-p 'clojure-mode)
+  (package-refresh-contents)
+  (package-install 'clojure-mode))
