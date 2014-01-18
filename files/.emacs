@@ -32,11 +32,18 @@
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
 
 ; Conditional package installs if package.el is installed
-(when (require 'package nil 'noerror)g
-  ; clojure-mode
+(when (require 'package nil 'noerror)
+  ; initialize
   (add-to-list 'package-archives
 	       '("marmalade" . "http://marmalade-repo.org/packages/"))
   (package-initialize)
+
+  ; clojure-mode
   (unless (package-installed-p 'clojure-mode)
     (package-refresh-contents)
-    (package-install 'clojure-mode)))
+    (package-install 'clojure-mode))
+
+  ; org-mode
+  (unless (package-installed-p 'org)
+    (package-refresh-contents)
+    (package-install 'org)))
