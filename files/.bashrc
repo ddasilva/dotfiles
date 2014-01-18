@@ -69,7 +69,7 @@ if [ "$color_prompt" = yes ]; then
 
 	# Devices
 	    raspberrypi )
-		PS1="\[\033[01;34m\]\u@\h\[\033[01;30m\] \w\$\[\033[00m\] ";;
+		PS1="\[\033[01;36m\]\u@\h\[\033[01;30m\] \w\$\[\033[00m\] ";;
 
 	# Default
 	    *)
