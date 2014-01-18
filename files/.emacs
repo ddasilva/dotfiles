@@ -31,12 +31,12 @@
 ; Move backups to somewhere else
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
 
-; Clojure mode
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(package-initialize)
-
-(unless (package-installed-p 'clojure-mode)
-  (package-refresh-contents)
-  (package-install 'clojure-mode))
+; Conditional package installs if package.el is installed
+(when (require 'package nil 'noerror)g
+  ; clojure-mode
+  (add-to-list 'package-archives
+	       '("marmalade" . "http://marmalade-repo.org/packages/"))
+  (package-initialize)
+  (unless (package-installed-p 'clojure-mode)
+    (package-refresh-contents)
+    (package-install 'clojure-mode)))

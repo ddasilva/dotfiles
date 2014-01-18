@@ -60,17 +60,12 @@ if [ "$color_prompt" = yes ]; then
 		PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ";;
 	    
 	# Personal Servers
-	    rainbowroad.org | meltingwax.xen.prgmr.com | rapids)
+	    rainbowroad.org | meltingwax.xen.prgmr.com | rapids | raspberrypi )
 		PS1="\[\033[01;35m\]\u@\h\[\033[01;30m\] \w\$\[\033[00m\] ";;
 	    
 	# Work Servers
 	    s4pt | gsocial)
 		PS1="\[\033[01;33m\]\h\[\033[00;36m\]:\w\[\033[00m\]$ ";;
-
-        # Devices
-	    raspberrypi)
-		PS1="\[\033[01;92m\]\h\[\033[01;31m\]:\w\[\033[01;95m\]$\[\033[00m\] ";;
-
 	    
 	# Default
 	    *)
