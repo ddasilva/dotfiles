@@ -2,6 +2,7 @@
 ; Email: <daniel@meltingwax.net>
 ; Please enjoy your stay, and don't fret.
 
+; Java Indentation
 ; http://www.emacswiki.org/emacs/IndentingJava
 (add-hook 'java-mode-hook
 	  (lambda ()
@@ -9,10 +10,10 @@
 	    (setq c-comment-start-regexp "(@|/(/|[*][*]?))")
 	    (modify-syntax-entry ?@ "< b" java-mode-syntax-table)))
 
-(add-hook 'java-mode-hook (lambda ()
-			    (setq c-basic-offset 4)))
+(add-hook 'java-mode-hook (lambda () (setq c-basic-offset 4)))
 
-; http://emacsblog.org/2007/01/17/indent-whole-buffer/
+; Indent whole buffer
+; Source: http://emacsblog.org/2007/01/17/indent-whole-buffer/
 (defun iwb ()
   "indent whole buffer"
   (interactive)
@@ -30,6 +31,9 @@
 
 ; Move backups to somewhere else
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
+
+; Rebind C-x C-b to electric-buffer-list
+(global-set-key "\C-x\C-b" 'electric-buffer-list)
 
 ; Conditional package installs if package.el is installed
 (when (require 'package nil 'noerror)
