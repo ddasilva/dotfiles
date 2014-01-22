@@ -68,7 +68,7 @@ if [ "$color_prompt" = yes ]; then
 		PS1="\[\033[01;35m\]\u@\h\[\033[01;30m\] \w\$\[\033[00m\] ";;
 	    
 	# Work Servers
-	    s4pt | gsocial)
+	    s4pt | gsocial | monet )
 		PS1="\[\033[01;33m\]\h\[\033[00;36m\]:\w\[\033[00m\]$ ";;
 
 	# Devices
