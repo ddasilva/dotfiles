@@ -25,6 +25,7 @@ normal() {
 			dest=$HOME
 		    fi;;
 		.emacs) dest=$HOME;;
+		.gdbinit) dest=$HOME;;
 		.gitconfig) dest=$HOME;;
 		.screenrc) dest=$HOME;;
 		*) dest=;;
