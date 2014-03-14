@@ -42,3 +42,7 @@
  '(custom-enabled-themes (quote (wombat)))
  '(inhibit-startup-screen t))
 (custom-set-faces)
+
+; C settings
+(setq-default c-default-style "linux"
+              c-basic-offset 4)
