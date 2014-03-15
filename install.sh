@@ -28,6 +28,7 @@ normal() {
 		.gdbinit) dest=$HOME;;
 		.gitconfig) dest=$HOME;;
 		.screenrc) dest=$HOME;;
+		.python_startup.py) dest=$HOME;;
 		*) dest=;;
 	    esac
 	
