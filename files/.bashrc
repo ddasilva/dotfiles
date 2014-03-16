@@ -23,6 +23,16 @@ export Y_DEV_KEY="AI39si4J3y3x67SL4SOyCSKUTQ9lk6r-taAoWd9oCars9G7COACM2QVIquCFm1
 export ANT_ARGS='-logger org.apache.tools.ant.listener.AnsiColorLogger'
 export PYTHONSTARTUP=$HOME/.python_startup.py
 
+etags_build() {
+    if [ $(which etags) ]; then
+        (find . -name '*.[ch]'
+         find . -name '*.cpp'
+	) | grep -v "CVS/Base" | sort | xargs etags -a
+    else
+	echo "etags not installed"
+    fi
+}
+
 # ---------------- Stop Here if not running interactively ---------------- #
 
 [ -z "$PS1" ] && return
