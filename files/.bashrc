@@ -28,6 +28,8 @@ etags_build() {
         (find . -name '*.[ch]'
          find . -name '*.cpp'
 	 find . -name '*.py'
+	 find . -name '*.java'
+	 find . -name '*.js'
 	) | grep -v "CVS/Base" | sort | xargs etags -a
     else
 	echo "etags not installed"
