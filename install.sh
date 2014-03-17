@@ -19,7 +19,7 @@ normal() {
 	if [[ "$last_char" != '~' && "$last_char" != '#' ]]; then
 	    case "$fname" in
 		.bashrc)
-		    if [ $(uname) == 'Darwin' ]; then
+                    if [ $(uname) == 'Darwin' ]; then
 			dest=$HOME/.profile
 		    else
 			dest=$HOME
@@ -29,13 +29,19 @@ normal() {
 		.gitconfig) dest=$HOME;;
 		.screenrc) dest=$HOME;;
 		.python_startup.py) dest=$HOME;;
+		.emacs.d) dest=$HOME;;
 		*) dest=;;
 	    esac
 	
 	    if [ -z "$dest" ]; then
 		echo -e "${red}WARNING: Don't know where to put ${fname} ${no_red}"
 	    else
-		cp -v files/$fname $dest
+		if [ -d files/$fname ]; then
+		    shopt -s dotglob
+		    cp -Rv files/$fname $dest
+		else
+		    cp -v files/$fname $dest
+		fi
 	    fi
 	fi
     done
