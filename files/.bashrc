@@ -25,12 +25,13 @@ export PYTHONSTARTUP=$HOME/.python_startup.py
 
 etags_build() {
     if [ $(which etags) ]; then
-        (find . -name '*.[ch]'
-         find . -name '*.cpp'
-	 find . -name '*.py'
-	 find . -name '*.java'
-	 find . -name '*.js'
-	) | grep -v "CVS/Base" | sort | xargs etags -a
+	exclude="-path ./build -prune -o"
+        (find . $exclude -name '*.[ch]'
+         find . $exclude -name '*.cpp'
+	 find . $exclude -name '*.py'
+	 find . $exclude -name '*.java'
+	 find . $exclude -name '*.js'
+	) | grep -v "CVS/Base" | sort | xargs etags -a 2> /dev/null
     else
 	echo "etags not installed"
     fi
