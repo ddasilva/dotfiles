@@ -1,3 +1,5 @@
+br _PyImport_LoadDynamicModule
+
 # If you use the GNU debugger gdb to debug the Python C runtime, you
 # might find some of the following commands useful.  Copy this to your
 # ~/.gdbinit file and it'll get loaded into gdb automatically when you
