@@ -19,6 +19,7 @@ fi
 
 export PATH=$HOME/bin:$HOME/Bin:$HOME/.local/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.local/lib/:$LD_LIBRARY_PATH
+export EDITOR="emacs -nw"
 export Y_DEV_KEY="AI39si4J3y3x67SL4SOyCSKUTQ9lk6r-taAoWd9oCars9G7COACM2QVIquCFm1om9NHBYsSBGmWeqeRU_30XkJuvVW68AJC3nQ"
 export ANT_ARGS='-logger org.apache.tools.ant.listener.AnsiColorLogger'
 export PYTHONSTARTUP=$HOME/.python_startup.py
