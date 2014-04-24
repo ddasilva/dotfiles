@@ -38,3 +38,10 @@
 (setq-default c-default-style "linux"
               c-basic-offset 4
               indent-tabs-mode nil)
+
+; Emacs 24 Package System
+(when (>= emacs-major-version 24)
+  (require 'package)
+  (package-initialize)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t))
+
