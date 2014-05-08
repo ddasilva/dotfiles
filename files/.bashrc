@@ -38,6 +38,11 @@ etags_build() {
     fi
 }
 
+
+rm_pyc() {
+    find . -name '*.pyc' | xargs rm
+}
+
 # ---------------- Stop Here if not running interactively ---------------- #
 
 [ -z "$PS1" ] && return
