@@ -30,7 +30,7 @@
 
 ; Custom Themes
 (custom-set-variables
- '(custom-enabled-themes (quote (wombat)))
+; '(custom-enabled-themes (quote (wombat)))
  '(inhibit-startup-screen t))
 (custom-set-faces)
 
