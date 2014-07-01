@@ -44,6 +44,16 @@ rm_pyc() {
     find . -name '*.pyc' | xargs rm
 }
 
+
+short() {
+    export OLD_PS1=$PS1
+    export PS1="$ "
+}
+
+long() {
+    export PS1=$OLD_PS1
+}
+
 # ---------------- Stop Here if not running interactively ---------------- #
 
 [ -z "$PS1" ] && return
