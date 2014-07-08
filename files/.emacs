@@ -4,11 +4,12 @@
 
 (add-to-list 'load-path "~/.emacs.d/")
 
-(load "~/.emacs.d/git-modes/gitattributes-mode")
-(load "~/.emacs.d/git-modes/git-commit-mode")
-(load "~/.emacs.d/git-modes/gitconfig-mode")
-(load "~/.emacs.d/git-modes/gitignore-mode")
-(load "~/.emacs.d/git-modes/git-rebase-mode")
+(when (not (getenv "EMACS_NO_GIT"))
+  (load "~/.emacs.d/git-modes/gitattributes-mode")
+  (load "~/.emacs.d/git-modes/git-commit-mode")
+  (load "~/.emacs.d/git-modes/gitconfig-mode")
+  (load "~/.emacs.d/git-modes/gitignore-mode")
+  (load "~/.emacs.d/git-modes/git-rebase-mode"))
 
 ; Enable syntax hilighting
 (cond ((fboundp 'global-font-lock-mode)
