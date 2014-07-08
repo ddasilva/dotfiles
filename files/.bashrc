@@ -92,7 +92,7 @@ if [ "$color_prompt" = yes ]; then
 	    
 	# Work Servers
 	    s4pt | gsocial | monet )
-		PS1="\[\033[01;33m\]\h\[\033[00;36m\]:\w\[\033[00m\]$ ";;
+		PS1="\[\033[01;33m\]\h\[\033[00;36m\]:\w\[\033[00m\] $ ";;
 
 	# Devices
 	    raspberrypi )
@@ -109,5 +109,6 @@ fi
 
 unset color_prompt
 
-
-
+if [ -f $HOME/.bash_local ]; then
+    source $HOME/.bash_local
+fi
