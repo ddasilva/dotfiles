@@ -102,7 +102,7 @@ if [ "$color_prompt" = yes ]; then
 	    
 	# Work Servers
 	    s4pt | gsocial | monet )
-		PS1="\[\033[01;33m\]\h\[\033[00;36m\]:\w\[\033[00m\] $ ";;
+                PS1="\[\e[01;33m\]\u@\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;34m\]\W\\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\]";;
 
 	# Devices
 	    raspberrypi )
