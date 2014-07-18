@@ -1,6 +1,6 @@
 #########################################################
-# MeltingWax's ~/.bashrc
-# By: MeltingWax <daniel@meltingwax.net>
+# Daniel da Silva's ~/.bashrc
+# contact: mail@danieldasilva.org
 #########################################################
 
 # --------------------- Personal Aliases/Exports ------------------------- #
