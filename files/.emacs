@@ -40,6 +40,10 @@
               c-basic-offset 4
               indent-tabs-mode nil)
 
+; Special mode handlers
+(setq auto-mode-alist
+      (cons '("\\.make\\'" . makefile-mode) auto-mode-alist))
+
 ; Emacs 24 Package System
 (when (>= emacs-major-version 24)
   (require 'package)
