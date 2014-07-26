@@ -10,6 +10,7 @@ alias emaf="emacs -nw"
 alias git_untracked='git ls-files . --exclude-standard --others'
 alias f="find -name "
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias iperl="perl -d -e 1"
 
 if [ $(uname) != 'Darwin' ]; then
     alias ls="ls --color=auto"
@@ -53,6 +54,7 @@ short() {
 long() {
     export PS1=$OLD_PS1
 }
+
 
 # ---------------- Stop Here if not running interactively ---------------- #
 
