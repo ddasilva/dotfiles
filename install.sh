@@ -1,7 +1,7 @@
 #!/bin/bash
 ##############################################
-# Installer for dot files, by meltingwax.
-# Email: <daniel@meltingwax.net>
+# Installer for dot files, by Daniel da Silva.
+# Email: <mail@danieldasilva.org>
 ##############################################
 
 usage() {
