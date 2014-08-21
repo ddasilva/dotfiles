@@ -1,3 +1,4 @@
+
 ; Hello and -WELCOME- to MeltingWax's ~/.emacs!
 ; Email: <daniel@meltingwax.net>
 ; Please enjoy your stay, and don't fret.
@@ -25,8 +26,12 @@
 (global-set-key "\C-x\C-b" 'electric-buffer-list)
 
 ; Hide scrollbar, toolbar, and menubar
-(scroll-bar-mode 0)
-(tool-bar-mode 0)
+(if (boundp 'scroll-bar-mode)
+    (scroll-bar-mode 0))
+
+(if (boundp 'tool-bar-mode)
+    tool-bar-mode 0)
+
 (menu-bar-mode 0)
 
 ; Custom Themes
