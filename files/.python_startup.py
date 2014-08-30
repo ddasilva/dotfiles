@@ -1,7 +1,7 @@
 
 try:
-    import numpy as np
-    import numpy
+    import numpy 
+    np = numpy
 except ImportError:
     pass
 
