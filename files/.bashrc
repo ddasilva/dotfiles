@@ -41,11 +41,9 @@ etags_build() {
     fi
 }
 
-
 rm_pyc() {
     find . -name '*.pyc' | xargs rm
 }
-
 
 short() {
     export OLD_PS1=$PS1
@@ -54,6 +52,14 @@ short() {
 
 long() {
     export PS1=$OLD_PS1
+}
+
+cvs_recent() {
+    cvs log -d ">=$1" -N -S -R 
+}
+
+cvs_today() {
+    cvs_recent $(date +%Y-%m-%d)
 }
 
 
