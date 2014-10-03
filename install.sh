@@ -30,6 +30,7 @@ normal() {
 		.screenrc) dest=$HOME;;
 		.python_startup.py) dest=$HOME;;
 		.emacs.d) dest=$HOME;;
+                .ssh) dest=$HOME;;
 		*) dest=;;
 	    esac
 	
