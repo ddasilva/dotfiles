@@ -31,6 +31,7 @@ normal() {
 		.python_startup.py) dest=$HOME;;
 		.emacs.d) dest=$HOME;;
                 .ssh) dest=$HOME;;
+                .vimrc) dest=$HOME;;
 		*) dest=;;
 	    esac
 	
