@@ -1,7 +1,4 @@
-
-; Hello and -WELCOME- to MeltingWax's ~/.emacs!
-; Email: <daniel@meltingwax.net>
-; Please enjoy your stay, and don't fret.
+; Hello and welcome to Daniel da Silva's .emacs.
 
 (add-to-list 'load-path "~/.emacs.d/")
 
@@ -12,18 +9,20 @@
   (load "~/.emacs.d/git-modes/gitignore-mode")
   (load "~/.emacs.d/git-modes/git-rebase-mode"))
 
+(when (not (getenv "EMACS_NO_APPLE_KEYBOARD"))
+  ;; Set keys for Apple keyboard, for emacs in OS X 
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier  'super)
+  (setq mac-control-modifier 'control)
+  (setq ns-function-modifier 'hyper))
+
 ; Enable syntax hilighting
 (cond ((fboundp 'global-font-lock-mode)
-       ;; Turn on font-lock in all modes that support it
        (global-font-lock-mode t)
-       ;; Maximum colors
        (setq font-lock-maximum-decoration t)))
 
 ; Move backups to somewhere else
 (setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
-
-; Rebind C-x C-b to electric-buffer-list
-(global-set-key "\C-x\C-b" 'electric-buffer-list)
 
 ; Hide scrollbar, toolbar, and menubar
 (if (boundp 'scroll-bar-mode)
@@ -38,6 +37,7 @@
 (custom-set-variables
  '(custom-enabled-themes (quote (wombat)))
  '(inhibit-startup-screen t))
+
 (custom-set-faces)
 
 ; Defaults
