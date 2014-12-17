@@ -62,6 +62,9 @@ cvs_today() {
     cvs_recent $(date +%Y-%m-%d)
 }
 
+cvs_diff() {
+    cvs diff -bup $@ | colordiff.pl | less -R
+}
 
 # ---------------- Stop Here if not running interactively ---------------- #
 
