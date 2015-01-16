@@ -48,6 +48,8 @@
 ; Special mode handlers
 (setq auto-mode-alist
       (cons '("\\.make\\'" . makefile-mode) auto-mode-alist))
+(setq auto-mode-alist
+      (cons '("\\.svc\\'" . makefile-mode) auto-mode-alist))
 
 (setq auto-mode-alist
       (cons '("\\.t\\'" . perl-mode) auto-mode-alist))
