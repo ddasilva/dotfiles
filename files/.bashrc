@@ -113,7 +113,7 @@ if [ "$color_prompt" = yes ]; then
 		PS1="\[\033[01;35m\]\u@\h\[\033[01;30m\] \w\$\[\033[00m\] ";;
 	    
 	# Work Servers
-	    s4ptnew.gesdisc.eosdis.nasa.gov | s4pt | gsocial | monet | gs673-endor.ndc.nasa.gov )
+	    s4ptnew.gesdisc.eosdis.nasa.gov | s4pt | gsocial | monet | gs673-endor.ndc.nasa.gov | gs670-goewin.ndc.nasa.gov )
                 PS1="\[\e[01;33m\]\u@\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;34m\]\W\\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\]";;
 
 	# Devices
