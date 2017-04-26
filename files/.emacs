@@ -1,7 +1,5 @@
 ; Hello and welcome to Daniel da Silva's .emacs.
 
-(add-to-list 'load-path "~/.emacs.d/")
-
 (when (not (getenv "EMACS_NO_GIT"))
   (load "~/.emacs.d/git-modes/gitattributes-mode")
   (load "~/.emacs.d/git-modes/git-commit-mode")
