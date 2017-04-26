@@ -24,7 +24,7 @@ export EDITOR="emacs -nw"
 export Y_DEV_KEY="AI39si4J3y3x67SL4SOyCSKUTQ9lk6r-taAoWd9oCars9G7COACM2QVIquCFm1om9NHBYsSBGmWeqeRU_30XkJuvVW68AJC3nQ"
 export ANT_ARGS='-logger org.apache.tools.ant.listener.AnsiColorLogger'
 export PYTHONSTARTUP=$HOME/.python_startup.py
-export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ";;
+export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ "
 	   
 if [ -f $HOME/.bash_local ]; then
     source $HOME/.bash_local
