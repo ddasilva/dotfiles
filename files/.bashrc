@@ -62,10 +62,10 @@ txtrst='\e[0m'    # Text Reset
 #-----------------------------------------------------------
 # PS1 TABLE FOR COPY AND PASTING INTO ~/.bash_local
 #
-# Green/Blue     export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]"
-# Yellow/Blue:   export PS1="\[\e[01;33m\]\u@\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;34m\]\W\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
-# Cyan/Gray:     export PS1="\[\033[01;36m\]\u@\h\[\033[01;30m\] \w$\[\033[00m\]"
-# Blue/Purple:   export PS1="\[\e[01;34m\]\u@\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;35m\]\W\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\]"
+# Green/Blue     export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] "
+# Yellow/Blue:   export PS1="\[\e[01;33m\]\u@\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;34m\]\W\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\] "
+# Cyan/Gray:     export PS1="\[\033[01;36m\]\u@\h\[\033[01;30m\] \w$\[\033[00m\] "
+# Blue/Purple:   export PS1="\[\e[01;34m\]\u@\h\[\e[0m\]\[\e[00;37m\]:\[\e[0m\]\[\e[01;35m\]\W\$\[\e[0m\]\[\e[00;37m\] \[\e[0m\] "
 
 if [ -f $HOME/.bash_local ]; then
     source $HOME/.bash_local

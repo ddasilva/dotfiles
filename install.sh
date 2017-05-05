@@ -24,15 +24,7 @@ normal() {
 		    else
 			dest=$HOME
 		    fi;;
-		.emacs) dest=$HOME;;
-		.gdbinit) dest=$HOME;;
-		.gitconfig) dest=$HOME;;
-		.screenrc) dest=$HOME;;
-		.python_startup.py) dest=$HOME;;
-		.emacs.d) dest=$HOME;;
-                .ssh) dest=$HOME;;
-                .vimrc) dest=$HOME;;
-		*) dest=;;
+		*) dest=$HOME;;
 	    esac
 	
 	    if [ -z "$dest" ]; then
