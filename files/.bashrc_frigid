@@ -7,6 +7,11 @@ if [ -e $local_setup ]; then
     source $local_setup
 fi
 
+pyitos_setup=/Users/dedasilv/Repos/pyitos/setup.sh
+if [ -e $pyitos_setup ]; then
+    source $pyitos_setup
+fi
+
 export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\h\[\033[00m\]:\[\033[01;34m\]\w$\[\033[00m\] "
 export PATH=/opt/local/bin/:$PATH
 export PATH=$HOME/anaconda3/bin:$PATH
@@ -18,6 +23,7 @@ export PATH=$HOME/Repos/sips/bin:$HOME/.bin:$PATH
 export PATH=$HOME/Applications/node-v4.4.4-darwin-x64/bin:$PATH
 export PATH=$HOME/.local/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH
 export PYTHONPATH=$HOME/Repos/ATLAS_Calibration
+export PYTHONPATH=/Users/dedasilv/Repos/pyitos:$PYTHONPATH
 export C=$HOME/Repos/ATLAS_Calibration
 export EDITOR="emacs -nw"
 export EMACS_NO_GIT=1
@@ -33,7 +39,8 @@ alias yavin="ssh yavin -Y"
 alias yavin_forward="ssh yavin -L 8000:127.0.0.1:8000 -l dedasilv"
 alias endor="ssh gs673-endor.ndc.nasa.gov -Y"
 alias goewin="ssh gs670-goewin.ndc.nasa.gov -Y"
-
+alias emacs=$HOME/Desktop/Emacs.app/Contents/MacOS/Emacs
+alias emaf="emacs -nw"
 
 function emacs_gui {
     for fname in "$@"; do
@@ -43,9 +50,6 @@ function emacs_gui {
 	~/Desktop/Emacs.app/Contents/MacOS/Emacs "$fname" 2> /dev/null &
     done
 }
-
-alias emacs=$HOME/Desktop/Emacs.app/Contents/MacOS/Emacs
-alias emaf="emacs -nw"
 
 function sublime() {
     local fname=$1
@@ -64,7 +68,3 @@ function cal() {
 function tdc_computer() {
     echo GSSLA16090790.local
 }
-
-# PyITOS Setup
-export PYTHONPATH=/Users/dedasilv/Repos/pyitos:$PYTHONPATH
-source /Users/dedasilv/Repos/pyitos/setup.sh
