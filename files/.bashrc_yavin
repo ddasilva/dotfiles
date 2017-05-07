@@ -1,7 +1,16 @@
 # -*- mode:sh -*-
 
+if   [[ $(hostname) == "gs673-fpiprd1.ndc.nasa.gov" ]]; then
+    shorthost=yavin
+elif [[ $(hostname) == "gs673-fpiprd2.ndc.nasa.gov" ]]; then
+    shorthost=dagobah
+elif [[ $(hostname) == "gs673-endor.ndc.nasa.gov" ]]; then
+    shorthost=endor
+else
+    shorthost=$(hostname)
+fi
 
-export PS1="${bldylw}yavin ${bldgrn}\w ${txtrst}$ "
+export PS1="${bldylw}${shorthost} ${bldgrn}\w ${txtrst}$ "
 export PATH=/opt/fpi/anaconda/bin:$PATH
 export PATH=$HOME/FPIanalysis:$PATH
 
