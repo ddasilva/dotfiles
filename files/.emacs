@@ -31,6 +31,9 @@
 
 (menu-bar-mode 0)
 
+; Column number mode always on
+(setq column-number-mode t)
+
 ; Custom Themes
 (custom-set-variables
  '(custom-enabled-themes (quote (wombat)))
@@ -57,4 +60,5 @@
   (require 'package)
   (package-initialize)
   (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t))
+
 

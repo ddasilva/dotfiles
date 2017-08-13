@@ -12,6 +12,7 @@ fi
 
 export PS1="${bldylw}${shorthost} ${bldgrn}\w ${txtrst}$ "
 export PATH=/opt/fpi/anaconda/bin:$PATH
+export PATH=/opt/fpi/spark/bin:$PATH
 export PATH=$HOME/FPIanalysis:$PATH
 
 
