@@ -10,7 +10,8 @@ else
     shorthost=$(hostname)
 fi
 
-export PS1="\[${bldylw}\]\[${shorthost}\]\[$txtrst\]\[${bldgrn}\]\w \[${txtrst}\]$ "
+export PS1="\[$(tput bold)\]\[\033[38;5;33m\]\H\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]:\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;251m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]\\$ \[$(tput sgr0)\]"
+
 export PATH=/opt/fpi/anaconda/bin:$PATH
 export PATH=/opt/fpi/spark/bin:$PATH
 export PATH=$HOME/FPIanalysis:$PATH
