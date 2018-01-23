@@ -1,5 +1,6 @@
 ; Hello and welcome to Daniel da Silva's .emacs.
 
+
 (when (not (getenv "EMACS_NO_GIT"))
   (load "~/.emacs.d/git-modes/gitattributes-mode")
   (load "~/.emacs.d/git-modes/git-commit-mode")
@@ -46,19 +47,28 @@
               c-basic-offset 4
               indent-tabs-mode nil)
 
+(add-hook 'go-mode-hook
+          (lambda ()
+            ;(add-hook 'before-save-hook 'gofmt-before-save)
+            (setq tab-width 4)
+            (setq indent-tabs-mode 0)))
+
 ; Special mode handlers
 (setq auto-mode-alist
       (cons '("\\.make\\'" . makefile-mode) auto-mode-alist))
 (setq auto-mode-alist
       (cons '("\\.svc\\'" . makefile-mode) auto-mode-alist))
-
 (setq auto-mode-alist
       (cons '("\\.t\\'" . perl-mode) auto-mode-alist))
-
-; Emacs 24 Package System
-(when (>= emacs-major-version 24)
-  (require 'package)
-  (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t))
-
-
+(setq auto-mode-alist
+      (cons '("\\.js\\'" . rjsx-mode) auto-mode-alist))
+  
+; MELPA
+(require 'package)
+(let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
+                    (not (gnutls-available-p))))
+       (proto (if no-ssl "http" "https")))
+  (add-to-list 'package-archives (cons "melpa" (concat proto "://melpa.org/packages/")) t)
+  (when (< emacs-major-version 24)
+    (add-to-list 'package-archives '("gnu" . (concat proto "://elpa.gnu.org/packages/")))))
+(package-initialize)
