@@ -53,6 +53,9 @@
             (setq tab-width 4)
             (setq indent-tabs-mode 0)))
 
+(add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 2)))
+
+
 ; Special mode handlers
 (setq auto-mode-alist
       (cons '("\\.make\\'" . makefile-mode) auto-mode-alist))
